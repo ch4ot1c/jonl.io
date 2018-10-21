@@ -1,0 +1,108 @@
+body { background-color: #212121; margin: 0; }
+header { max-height: 56px; }
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 600px;
+  padding-bottom: 56px;
+}
+
+h1, h2, p, i, b, a, span { font-family: "Source Code Pro", serif; }
+h1 { text-align: center; color: #39A9E6; margin-top: 20px; font-size: 250%; }
+h1, h2 { font-weight: normal; text-align: center; margin-bottom: 0px; }
+
+h2, p, i, b, a {
+  color: #E0E0E0;
+  text-decoration: none;
+}
+
+h2, p { margin-top: 20px; }
+p { text-align: left; }
+a { border-bottom: 0; text-decoration: none; }
+a:hover {
+    border-bottom: 1px dotted #E0E0E0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span, .material-icons {
+  color: #A6A6A6;
+  line-height: 56px;
+  padding-right: 8px;
+  padding-left: 8px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.text {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.line {
+  height: 1px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #A6A6A6;
+  opacity: 0.2;
+}
+
+.body-light { background-color: #FDF6E3; }
+.span-light { color: #646464; }
+.text-light { color: #212121; }
+.line-light { background-color: #646464; }
+
+.pressed { background-color: rgba(166, 166, 166, 0.2); }
+.hidden { visibility: hidden; }
+
+.mobile { display: none; }
+
+@media (max-width: 600px) {
+  .desktop { display: none; }
+  .mobile { display: inline-block; }
+}
+
+
+p.color-title {
+  color: coral;
+}
+
+.social-list {
+  list-style: none;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0px;
+}
+
+.social-list li {
+  width: 60px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.social-list li a:hover {
+  border-bottom: 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+.qr {
+  width: 300px;
+}
+
+p~b {
+  word-wrap: break-word;
+}
