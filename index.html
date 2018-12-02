@@ -1,97 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+  <title>JonL.io</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
 <body>
-  <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-
-    <title>JonL.io</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-  </head>
-  <header>
-
-    <span class="previous button left material-icons" style="display: none;">navigate_before</span>
-    <span class="next button material-icons" style="display: none;">navigate_next</span>
-
-    <!-- Switches between an icon and text -->
-    <span class="text left desktop" id="desktop" style="display: none;"></span>
-    <span class="text left mobile" id="mobile" style="display: none;"></span>
-
-    <!-- Switches between small and large -->
-    <!--
-    <span class="inversion button right mobile material-icons">invert_colors</span>
-    <span class="inversion button right desktop" style="margin-right:40px;">&#9635;</span>
-    -->
-
-  </header>
   <section>
-
-    <!-- (Increment for next post) (first visible at the top) -->
-
-    <div class="post" id="0" style="margin-top: 40px;">
+    <div class="post" id="page" style="margin-top: 40px;">
       <h1>Jon Layton</h1>
       <h2>Software Developer</h2>
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <ul class="social-list centered">
         <li><a href="mailto:me@jonl.io">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#328cff" aria-label="Email" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%"/><rect width="355" height="256" x="78.5" y="128" fill="#fff" rx="8%"/><path fill="none" stroke="#328cff" stroke-width="20" d="M434 128L269 292c-7 8-19 8-26 0L78 128m0 256l129-128m227 128L305 256"/></svg>
-        </a></li>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#328cff" aria-label="Email" role="img" viewBox="0 0 512 512">
+              <rect width="512" height="512" rx="15%" />
+              <rect width="355" height="256" x="78.5" y="128" fill="#fff" rx="8%" />
+              <path fill="none" stroke="#328cff" stroke-width="20" d="M434 128L269 292c-7 8-19 8-26 0L78 128m0 256l129-128m227 128L305 256" /></svg>
+          </a></li>
         <li><a href="bitcoin:3J7j9ja4QZRY1rwUZiLkaikfh3q7F1d1Gu">
-          <svg fill="#fff" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Bitcoin" role="img"><rect fill="#f7931a" height="512" rx="15%" width="512"/><path d="m391 216c6-43-25-64-68-79l14-55-34-9-13 54-28-7 14-54-35-9-13 56-22-5-47-12-8 36 24 6c14 4 17 14 15 21l-15 63 3 1-3-1-22 89c-2 5-6 11-16 8l-24-6-17 39 68 17-13 57 33 8 14-55 26 6-13 55 34 9 14-56c58 11 102 6 120-46 14-42-1-66-32-82 22-5 39-20 44-49zm-77 108c-11 41-82 20-105 14l19-75c23 6 97 17 86 61zm9-110c-9 39-67 20-87 15l17-68c20 5 81 14 70 53z"/></svg>
-        </a></li>
+            <svg fill="#fff" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Bitcoin" role="img">
+              <rect fill="#f7931a" height="512" rx="15%" width="512" />
+              <path d="m391 216c6-43-25-64-68-79l14-55-34-9-13 54-28-7 14-54-35-9-13 56-22-5-47-12-8 36 24 6c14 4 17 14 15 21l-15 63 3 1-3-1-22 89c-2 5-6 11-16 8l-24-6-17 39 68 17-13 57 33 8 14-55 26 6-13 55 34 9 14-56c58 11 102 6 120-46 14-42-1-66-32-82 22-5 39-20 44-49zm-77 108c-11 41-82 20-105 14l19-75c23 6 97 17 86 61zm9-110c-9 39-67 20-87 15l17-68c20 5 81 14 70 53z" /></svg>
+          </a></li>
         <li><a href="https://discord.gg/fMrTuHS">
-          <svg fill="#7289da" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Discord" role="img"><rect height="512" rx="15%" width="512"/><path d="m346 392-21-25c41-11 57-39 57-39-52 49-194 51-249 0 0 0 14 26 56 39l-23 25c-70-1-97-48-97-48 0-104 46-187 46-187 47-33 90-33 90-33l3 4c-58 16-83 42-83 42 68-46 208-42 263 0 1-1-33-28-86-42l5-4s43 0 90 33c0 0 46 83 46 187 0 0-27 47-97 48z" fill="#fff"/><ellipse cx="196" cy="279" rx="33" ry="35"/><ellipse cx="312" cy="279" rx="33" ry="35"/></svg>
-        </a></li>
+            <svg fill="#7289da" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Discord" role="img">
+              <rect height="512" rx="15%" width="512" />
+              <path d="m346 392-21-25c41-11 57-39 57-39-52 49-194 51-249 0 0 0 14 26 56 39l-23 25c-70-1-97-48-97-48 0-104 46-187 46-187 47-33 90-33 90-33l3 4c-58 16-83 42-83 42 68-46 208-42 263 0 1-1-33-28-86-42l5-4s43 0 90 33c0 0 46 83 46 187 0 0-27 47-97 48z"
+                fill="#fff" />
+              <ellipse cx="196" cy="279" rx="33" ry="35" />
+              <ellipse cx="312" cy="279" rx="33" ry="35" /></svg>
+          </a></li>
       </ul>
 
       <ul class="social-list centered">
         <li><a href="https://github.com/ch4ot1c">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-label="Github" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%"/><clipPath id="a"><rect width="512" height="512" rx="15%"/></clipPath><path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z" clip-path="url(#a)"/></svg>
-        </a></li>
-        <li><a href="https://twitter.com/Jon_S_Layton">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512"><rect width="512" height="512" fill="#1da1f3" rx="15%"/><path fill="#fff" d="M437 152c-12 6-26 10-40 12 15-9 26-23 32-40-14 8-29 14-45 17a72 72 0 0 0-122 65c-56-3-110-29-145-74a68 68 0 0 0 22 94c-11 0-22-2-32-7 1 33 24 62 56 69-10 3-21 3-32 1 10 29 37 49 67 50-29 24-68 35-105 29a199 199 0 0 0 309-179c14-10 26-22 35-37"/></svg>
-        </a></li>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-label="Github" role="img" viewBox="0 0 512 512">
+              <rect width="512" height="512" rx="15%" />
+              <clipPath id="gh_svg">
+                <rect width="512" height="512" rx="15%" />
+              </clipPath>
+              <path fill="#fff" d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-50c-71 16-86-28-86-28-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"
+                clip-path="url(#gh_svg)" />
+            </svg>
+          </a></li>
+        <li><a href="https://twitter.com/Jon_L_">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-label="Twitter" role="img" viewBox="0 0 512 512">
+              <rect width="512" height="512" fill="#1da1f3" rx="15%" />
+              <path fill="#fff" d="M437 152c-12 6-26 10-40 12 15-9 26-23 32-40-14 8-29 14-45 17a72 72 0 0 0-122 65c-56-3-110-29-145-74a68 68 0 0 0 22 94c-11 0-22-2-32-7 1 33 24 62 56 69-10 3-21 3-32 1 10 29 37 49 67 50-29 24-68 35-105 29a199 199 0 0 0 309-179c14-10 26-22 35-37" /></svg>
+          </a></li>
         <li><a href="https://medium.com/@jon_l">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-label="Medium" role="img" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%"/><path fill="#fff" d="M125 173c0-4-2-9-5-11l-31-38v-6h98l75 166 67-166h93v6l-27 26c-2 1-3 4-3 7v190c0 3 1 6 3 8l27 25v6H289v-6l27-26c3-3 3-4 3-8V193l-76 192h-10l-88-192v129c-1 5 1 11 5 15l35 43v5H85v-5l35-43c4-4 6-10 5-15z"/></svg>
-        </a></li>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-label="Medium" role="img" viewBox="0 0 512 512">
+              <rect width="512" height="512" rx="15%" />
+              <path fill="#fff" d="M125 173c0-4-2-9-5-11l-31-38v-6h98l75 166 67-166h93v6l-27 26c-2 1-3 4-3 7v190c0 3 1 6 3 8l27 25v6H289v-6l27-26c3-3 3-4 3-8V193l-76 192h-10l-88-192v129c-1 5 1 11 5 15l35 43v5H85v-5l35-43c4-4 6-10 5-15z" /></svg>
+          </a></li>
         <li><a href="https://www.reddit.com/user/ch4ot1c/">
-          <svg fill="#ff4500" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="Reddit"><rect height="512" rx="15%" width="512"/><g fill="#fff"><ellipse cx="256" cy="307" rx="166" ry="117"/><ellipse cx="106" cy="256" rx="42" ry="42"/><ellipse cx="407" cy="256" rx="42" ry="42"/></g><path d="m256 196 23-101 73 15" fill="none" stroke="#fff" stroke-width="16"/><ellipse cx="375" cy="114" fill="#fff" rx="32" ry="31"/><ellipse cx="191" cy="287" rx="31" ry="31"/><ellipse cx="321" cy="287" rx="31" ry="31"/><path d="m191 359c33 25 97 26 130 0" fill="none" stroke="#ff4500" stroke-width="13"/></svg>
-        </a></li>
+            <svg fill="#ff4500" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Reddit">
+              <rect height="512" rx="15%" width="512" />
+              <g fill="#fff">
+                <ellipse cx="256" cy="307" rx="166" ry="117" />
+                <ellipse cx="106" cy="256" rx="42" ry="42" />
+                <ellipse cx="407" cy="256" rx="42" ry="42" />
+              </g>
+              <path d="m256 196 23-101 73 15" fill="none" stroke="#fff" stroke-width="16" />
+              <ellipse cx="375" cy="114" fill="#fff" rx="32" ry="31" />
+              <ellipse cx="191" cy="287" rx="31" ry="31" />
+              <ellipse cx="321" cy="287" rx="31" ry="31" />
+              <path d="m191 359c33 25 97 26 130 0" fill="none" stroke="#ff4500" stroke-width="13" />
+            </svg>
+          </a></li>
       </ul>
 
-      <!-- TODO Cashtag, Addrs -->
-
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       <p>
         <p class="color-title">Core -</p>
-        <p><a href="https://github.com/tc39/ecma262" target="_blank">javascript</a> <a href="https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md" target="_blank">typescript</a></p>
-        <p><a href="https://github.com/facebook/react" target="_blank">react</a> <a href="https://github.com/facebook/react-native" target="_blank">react-native</a> <a href="https://github.com/flutter/flutter" target="_blank">flutter</a></p>
-        <p><a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">markdown</a> <a href="https://getbootstrap.com/" target="_blank">bootstrap</a> <a href="https://nativebase.io/" target="_blank">nativebase</a></p>
-        <p><a href="https://expressjs.com/en/4x/api.html" target="_blank">express</a> <a href="https://socket.io/" target="_blank">socket.io</a> <a href="https://github.com/ethereum/web3.js/" target="_blank">web3</a></p>
-        <p><a href="https://aws.amazon.com/" target="_blank">aws</a> <a href="https://hub.docker.com/explore/" target="_blank">docker</a> <a href="https://pages.github.com/" target="_blank">gh-pages</a></p>
-        <p><a href="https://git-scm.com/" target="_blank">git</a> <a href="https://www.npmjs.com/" target="_blank">npm</a> <a href="https://github.com/robbyrussell/oh-my-zsh/wiki" target="_blank">zsh</a></p>
-        <br/>
+        <p><a href="https://github.com/tc39/ecma262" target="_blank">javascript</a> <a href="https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md"
+            target="_blank">typescript</a></p>
+        <p><a href="https://github.com/facebook/react" target="_blank">react</a> <a href="https://github.com/facebook/react-native"
+            target="_blank">react-native</a> <a href="https://github.com/flutter/flutter" target="_blank">flutter</a></p>
+        <p><a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">markdown</a> <a href="https://getbootstrap.com/"
+            target="_blank">bootstrap</a> <a href="https://nativebase.io/" target="_blank">nativebase</a></p>
+        <p><a href="https://expressjs.com/en/4x/api.html" target="_blank">express</a> <a href="https://socket.io/"
+            target="_blank">socket.io</a> <a href="https://github.com/ethereum/web3.js/" target="_blank">web3</a></p>
+        <p><a href="https://aws.amazon.com/" target="_blank">aws</a> <a href="https://hub.docker.com/explore/" target="_blank">docker</a>
+          <a href="https://pages.github.com/" target="_blank">gh-pages</a></p>
+        <p><a href="https://git-scm.com/" target="_blank">git</a> <a href="https://www.npmjs.com/" target="_blank">npm</a>
+          <a href="https://github.com/robbyrussell/oh-my-zsh/wiki" target="_blank">zsh</a></p>
+        <br />
         <p class="color-title">Languages by preference -</p>
-        <p><a href="https://en.cppreference.com/w/cpp" target="_blank">c++11-stl</a> <a href="https://github.com/tc39/ecma262" target="_blank">js-es7</a> <a href="https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md" target="_blank">ts</a> <a href="https://www.gnu.org/software/bash/" target="_blank">bash</a> <a href="https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html" target="_blank">swift</a> <a href="http://cslibrary.stanford.edu/101/EssentialC.pdf" target="_blank">c</a> <a href="https://docs.python.org/3.6/" target="_blank">python</a> <a href="https://remix.ethereum.org/" target="_blank">solidity</a> <a href="https://www.java.com/en/" target="_blank">java</a></p>
-        <br/>
+        <p><a href="https://en.cppreference.com/w/cpp" target="_blank">c++11-stl</a> <a href="https://github.com/tc39/ecma262"
+            target="_blank">js-es7</a> <a href="https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md" target="_blank">ts</a>
+          <a href="https://www.gnu.org/software/bash/" target="_blank">bash</a> <a href="https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html"
+            target="_blank">swift</a> <a href="http://cslibrary.stanford.edu/101/EssentialC.pdf" target="_blank">c</a>
+          <a href="https://docs.python.org/3.6/" target="_blank">python</a> <a href="https://remix.ethereum.org/"
+            target="_blank">solidity</a> <a href="https://www.java.com/en/" target="_blank">java</a></p>
+        <br />
         <p class="color-title">Platfoms I've developed on -</p>
-        <p><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">web</a> <a href="https://developer.chrome.com/extensions/devguide" target="_blank">chrome-browser</a> <a href="https://www.kernel.org/" target="_blank">linux</a> <a href="https://www.android.com/" target="_blank">android</a> <a href="https://www.apple.com/ios" target="_blank">ios</a> <a href="https://www.apple.com/watchos" target="_blank">watchos</a></p>
-        <br/>
+        <p><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">web</a> <a href="https://developer.chrome.com/extensions/devguide"
+            target="_blank">chrome-browser</a> <a href="https://www.kernel.org/" target="_blank">linux</a> <a href="https://www.android.com/"
+            target="_blank">android</a> <a href="https://www.apple.com/ios" target="_blank">ios</a> <a href="https://www.apple.com/watchos"
+            target="_blank">watchos</a></p>
+        <br />
         <p class="color-title">Protocols I've worked with -</p>
-        <p><a href="https://tools.ietf.org/html/rfc7540" target="_blank">http</a> <a href="https://mqtt.org/" target="_blank">mqtt</a> <a href="http://www.jsonrpc.org/" target="_blank">json-rpc</a> <a href="https://tools.ietf.org/html/rfc6455" target="_blank">websockets</a> <a href="https://webrtc.org/" target="_blank">webrtc</a> <a href="https://www.adobe.com/content/dam/acom/en/devnet/rtmp/pdf/rtmp_specification_1.0.pdf" target="_blank">rtmp</a> <a href="https://blog.cloudflare.com/announcing-1111/" target="_blank">dns</a></p>
-        <p><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">bitcoin</a> <a href="http://gavwood.com/paper.pdf" target="_blank">ethereum</a> <a href="https://github.com/zcash/zips/blob/master/protocol/protocol.pdf" target="_blank">zcash</a> <a href="https://github.com/z-classic/zclassic" target="_blank">zclassic</a> <a href="https://github.com/BTCPrivate/BitcoinPrivate" target="_blank">bitcoin-private</a></p>
-        <br/>
+        <p><a href="https://tools.ietf.org/html/rfc7540" target="_blank">http</a> <a href="https://mqtt.org/" target="_blank">mqtt</a>
+          <a href="http://www.jsonrpc.org/" target="_blank">json-rpc</a> <a href="https://tools.ietf.org/html/rfc6455"
+            target="_blank">websockets</a> <a href="https://webrtc.org/" target="_blank">webrtc</a> <a href="https://www.adobe.com/content/dam/acom/en/devnet/rtmp/pdf/rtmp_specification_1.0.pdf"
+            target="_blank">rtmp</a> <a href="https://blog.cloudflare.com/announcing-1111/" target="_blank">dns</a></p>
+        <p><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">bitcoin</a> <a href="http://gavwood.com/paper.pdf"
+            target="_blank">ethereum</a> <a href="https://github.com/zcash/zips/blob/master/protocol/protocol.pdf"
+            target="_blank">zcash</a> <a href="https://github.com/z-classic/zclassic" target="_blank">zclassic</a> <a
+            href="https://github.com/BTCPrivate/BitcoinPrivate" target="_blank">bitcoin-private</a></p>
+        <br />
         <p class="color-title">Design Experience -</p>
         <p>Typography, Iconography, Grid Systems</p>
         <p>Color Theory</p>
@@ -99,24 +135,21 @@
         <p>Web Content Accessibility Guidelines</p>
         <p>Google Material Design Guidelines</p>
         <p>iOS Human Interface Guidelines</p>
-        <br/>
-        <p class="color-title">Bitcoin - </p><b>3J7j9ja4QZRY1rwUZiLkaikfh3q7F1d1Gu</b>
+        <br />
+        <p id="donate" class="color-title">Bitcoin - </p><b>3J7j9ja4QZRY1rwUZiLkaikfh3q7F1d1Gu</b>
         <p class="color-title">Ethereum - </p><b>0xB18F3ddd237c6B06fd48b476a1EE3EC322d8Ba43</b>
         <p class="color-title">Bitcoin Private (shielded) - </p><b>zkY4fCSnTUC7fWiPSduJC2kXGMMcRgDsiAv8C7mdWYnLUxRWVh1ocq4XuGzZSDQAu7mqzJGbFPcEeupnWUL2NUv615J38om</b>
         <p class="color-title">Bitcoin Private (transparent) - </p><b>b1HGkrggGcajysjervsPqQVAB53tgAFGwKW</b>
         <p class="color-title">Zclassic - </p><b>t1a6sk1uFYSRdN9TYCnuGenPdJFL7CLUmS4</b>
         <p class="color-title">Zcash - </p><b>t1VodnUHjkxbZbVBY1PTXYv2556Lf7cKq1S</b>
         <p class="color-title">Bcash - </p><b>19Sihvv4Q2TSwGJT5J6uxF24h7WQWPUr5A</b>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <p class="color-title">PGP - </p><b>5BFF 3935 B019 A7A2 725A 054B 2AA6 11CC 09B3 EDA6</b>
-
+        <br />
     </div>
-
-    <!-- Programming Education -->
-
-    <br/>
   </section>
 
 </body>
+
 </html>
