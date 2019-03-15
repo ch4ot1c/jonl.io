@@ -69,7 +69,8 @@ span, .material-icons {
 }
 
 
-p.color-title {
+p.color-title,
+p.color-title a {
   color: coral;
 }
 
